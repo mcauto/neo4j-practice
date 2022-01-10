@@ -1,0 +1,23 @@
+mutation {
+    createMovies(
+        input: [
+        {
+            title: "Spider-Man"
+            actors: {
+            create: [
+                { node: { name: "Tobias Vincent Maguire" } }
+                { node: { name: "Andrew Russell Garfield" } }
+                { node: { name: "Thomas Stanley Tom Holland" } }
+            ]
+            }
+        }
+        ]
+    ) {
+        movies {
+        title
+        actors {
+            name
+        }
+        }
+    }
+}
